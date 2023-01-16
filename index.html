@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: #ececec;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="https:secure.tubanco.com/payment" method="POST">
+            <h1 class="header"> PAYMENT FORM</h1>
+            <br>
+            <h2> User Information</h2>
+            <p>Name & Surnames: 
+                <input type="text" required name="name" placeholder="Name">
+            </p>
+            <p>
+                <fieldset>
+                    <legend>Gender</legend>
+                    Male <input type="radio" 
+                    name="gender" 
+                    id = "male" 
+                    value="M" 
+                    required> Female <input type="radio" name="gender" id = "Female" value="F" required>
+                </fieldset>
+            </p>
+            <p>
+                Address
+                <textarea placeholder="Enter your Address" 
+                name="address" 
+                id="address" 
+                cols="100" 
+                rows="10"></textarea>
+            </p>
+            <p>
+                Email:
+                <input type="email" 
+                name="email" 
+                required placeholder="youremail@gmail.com" >
+            </p>
+            
+            <h2> Payment Information</h2>
+            <p>
+                Card: 
+                <select name="card_type" id="card_type" required>
+                    <option value="">-----Select Card Type-----</option>
+                    <option value="Visa">Visa</option>
+                    <option value="Paypal">Paypal</option>
+                    <option value="masterCard">MasterCard</option>
+                </select>
+            </p>
+            <p>
+                Card Number:
+                <input type="number" name="card_number" id="card_number" required placeholder="0123-4567-8910-1112">
+            </p>
+            <p>
+                Expiration Date:
+                <input type="date" name="exp_date" id="exp_date" required>
+            </p>
+
+            <p>
+                PinCode:
+                <input type="number" 
+                name="pincode" 
+                id="pincode" 
+                placeholder="1234">
+            </p>
+            <p>
+                CVV:
+                <input type="number" name="cvv" id="cvv" required placeholder="123">
+            </p>
+            <input type="Submit" value="Paynow" name="pay">
+        </form>
+    </div>
+</body>
+</html>
